@@ -11,6 +11,7 @@ require 'retrospec/spec_object'
 require 'retrospec/exceptions'
 require 'retrospec/version'
 require 'find'
+require 'pry'
 
 class Retrospec
 
@@ -33,6 +34,7 @@ class Retrospec
       @module_path = Utilities::PuppetModule.module_path
       @spec_object = Utilities::SpecObject.new(Utilities::PuppetModule.instance)
       spec_object.enable_beaker_tests = opts[:enable_beaker_tests]
+      binding.pry
     end
   end
 
